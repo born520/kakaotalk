@@ -1,9 +1,12 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');  // CORS 미들웨어 추가
 const app = express();
 const port = 3000;
 
-// JSON 파싱을 위한 미들웨어
+// CORS 설정: 모든 도메인 허용
+app.use(cors());
+
 app.use(express.json());
 
 // Kakao API 키 설정
