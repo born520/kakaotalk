@@ -4,8 +4,12 @@ const cors = require('cors');  // CORS 미들웨어 추가
 const app = express();
 const port = 3000;
 
-// CORS 설정: 모든 도메인 허용
-app.use(cors());
+// CORS 설정: 모든 도메인에서의 요청을 허용
+app.use(cors({
+  origin: '*', // 모든 출처 허용
+  methods: ['GET', 'POST'], // 허용할 메서드
+  allowedHeaders: ['Content-Type', 'Authorization'] // 허용할 헤더
+}));
 
 app.use(express.json());
 
