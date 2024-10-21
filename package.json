@@ -1,0 +1,15 @@
+{
+  "name": "kakao-proxy-server",
+  "version": "1.0.0",
+  "description": "Proxy server for Kakao API integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "axios": "^0.21.1"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
